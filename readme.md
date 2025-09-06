@@ -98,6 +98,34 @@ https://<UNIQUE-ID>.execute-api.<REGION>.amazonaws.com/<STAGE>/<RESOURCE>
 
 Use the invoke URL to call your endpoints and verify everything works!
 
-for More learn :
+### Example: Create User with cURL
+
+
+
+```bash
+curl -X POST \
+	<YOUR_INVOKE_URL>/create \
+	-H "Content-Type: application/json" \
+	-d '{"_id": "user123", "name": "John Doe", "email": "john@example.com"}'
+```
+
+### Example: Get User with cURL
+```bash
+curl -X GET \
+	<YOUR_INVOKE_URL>/get \
+	-H "Content-Type: application/json"
+```
+
+### Example: delete User with cURL
+
+```bash
+curl -X POST \
+	<YOUR_INVOKE_URL>/delete \
+	-H "Content-Type: application/json" \
+	-d '{"_id": "user123"}'
+```
+
+
+For More learn :
 
 - https://catalog.workshops.aws/serverless-patterns/en-US/business-scenario
